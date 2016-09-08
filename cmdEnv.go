@@ -15,7 +15,8 @@ func doIt(messageId string) error {
 	//if err != nil {
 	//	return err
 	//}
-
+	dd := os.Getenv("abcd")
+	fmt.Println(dd)
 	cmd := exec.Command("printenv")
 	env := os.Environ()
 	env = append(env, fmt.Sprintf("MESSAGE_ID=%s", messageId))

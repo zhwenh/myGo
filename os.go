@@ -3,8 +3,9 @@ package main
 
 import "fmt"
 import "path/filepath"
-
+import "time"
 func main() {
+	fmt.Println(time.Now())
         fmt.Printf("called %q: %q\n", "Abs", fmt.Sprint(filepath.Abs(`/windows/system32/drivers/etc/hosts`)))
         fmt.Printf("called %q: %q\n", "Base", fmt.Sprint(filepath.Base(`/windows/system32/drivers/etc/hosts`)))
         fmt.Printf("called %q: %q\n", "Base", fmt.Sprint(filepath.Base(`/var/lib/docker/containers/*/*-json.log`)))

@@ -17,8 +17,9 @@ func main() {
 	fmt.Println("%d %d %d", a, b, c)
 	greeting := "你好"
 	var str string
-	if str == "" {
+	if a,b = 3, 4; str == "" {
 		fmt.Println(greeting, classname)
+		fmt.Println(a, b)
 	}
 	stu1 := &stu{1, "wang han"}
 	fmt.Println(stu1.name)

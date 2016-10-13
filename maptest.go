@@ -35,9 +35,9 @@ func main() {
 	for i := range gids {
 		fmt.Println(i)
 	}
-	// for key, value := range m {
-	// 	fmt.Printf("key %s, value %g\n", key, value)
-	// }
+	for key, value := range m {
+		fmt.Printf("key %s, value %g\n", key, value)
+	}
 	// m["exp"] = 2.7182
 	// delete(m, "1")
 	// for key, value := range m {

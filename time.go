@@ -11,6 +11,10 @@ func main() {
 	if err != nil { // Always check errors even if they should not happen.
 		panic(err)
 	}
+	fmt.Println(t)
+
+	var tt time.Time
+	fmt.Println(tt, tt.After(time.Unix(0, 0)))	
 
 	// time.Time's Stringer method is useful without any format.
 	fmt.Println("default format:", t)

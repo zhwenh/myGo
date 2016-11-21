@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type I interface {
-	Talk()
+	Talk(func())
 	SameMethod()
 }
 
@@ -12,7 +12,8 @@ type Person struct {
   Name string
 }
 
-func (p *Person) Talk() {
+func (p *Person) Talk(callback func()) {
+  callback()
   fmt.Println("Hi, my name is", p.Name)
 }
 
@@ -38,22 +39,23 @@ func getAndroid(name string) I {
 		},
 	}
 }
-func (a *Android) Talk() {
-  fmt.Println("Hi, Android my name is", a.Name)
+
+func (a *Android) Internal() {
+	fmt.Printf("Android Internal")
 }
 
 func main() {
 	p := Person{
 		Name: "sbcd",	
 	}
-	p.Talk()
+	p.Talk(func(){return})
 	a := Android{
 		Person: p,
 	}
 	
-	a.Talk()
+	a.Talk(func(){return})
 
 	pi := getAndroid("adaf")
 	pi.SameMethod()
-	pi.Talk()
+	pi.Talk(func(){fmt.Printf("lala")})
 }

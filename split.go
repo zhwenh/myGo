@@ -34,4 +34,10 @@ func main() {
 		logDirs = append(logDirs, filepath.Dir(file))
 	}
 	fmt.Println(logDirs)
+	sss := strings.Join(logFiles, ",")
+	fmt.Println(sss)
+	var strArr []string
+	fmt.Println(strings.Join(strArr, ","))
+	strArr = make([]string, 0)
+	fmt.Println(strings.Join(strArr, ","))
 }

@@ -49,4 +49,6 @@ func main() {
 	// fmt.Println("v,ok ",value,ok)
 	// value2, ok2 := m2["abadfc"]
 	// fmt.Println("v,ok ",value2,ok2)
+	mmmm := make(map[string]string)
+	fmt.Println(mmmm["ddd"])
 }

@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+	start := time.Now()
+	fmt.Println(start)
 	// Parse a time value from a string in the standard Unix format.
 	t, err := time.Parse(time.UnixDate, "Sat Mar  7 11:06:39 PST 2015")
 	if err != nil { // Always check errors even if they should not happen.
@@ -105,5 +107,6 @@ func main() {
 
 	// If the fraction in the layout is 9s, trailing zeros are dropped.
 	do("9s for fraction", "15:04:05.99999999", "11:06:39.1234")
+	fmt.Println(time.Since(start))
 
 }

@@ -45,12 +45,10 @@ import (
 )
 
 func main() {
-    dat, _ := ioutil.ReadFile("./configmap")
-    // fmt.Println(string(dat))
-    // re := regexp.MustCompile("ALERT [a-zA-Z]+\n\\s+IF.*\n\\s+FOR\\s[0-9]+[a-z]\n\\s+LABELS {.*}\n\\s+ANNOTATIONS {\n\\s+")
-    re := regexp.MustCompile("ALERT.*IF.*")
+    dat, _ := ioutil.ReadFile("./auth")
+    re := regexp.MustCompile("'.*'")
     arr := re.FindAllString(string(dat), -1)
-    for i, m := range arr {
-        fmt.Println(i, m)
+    for _, m := range arr {
+        fmt.Println(m[1:len(m) - 1])
     }
 }

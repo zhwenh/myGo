@@ -4,7 +4,17 @@ import (
 	"fmt"
 )
 
+func MultiplyArray(arr1 []float64, num float64) {
+	for i := range arr1 {
+		arr1[i] *= num
+	}
+}
+
+
 func main() {
+	arrf := []float64{4,5,6, 7,8,9, 10}
+	MultiplyArray(arrf, 1000)
+	fmt.Println(arrf)
 	var arr []int
 	arr = make([]int, 1, 100)
 	arr[0] = 9

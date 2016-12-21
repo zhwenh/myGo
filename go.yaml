@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: basic-golang
+spec:
+  containers:
+    - name: golang
+      image: cargo.caicloudprivatetest.com/caicloud/golang:1.6
+      imagePullPolicy: Always
+      command: ["tail", "-f", "/dev/null"]

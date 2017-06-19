@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	m := map[string]float64{}
+	m := map[string]float64{
+		"1234":3.134,
+	}
 	m["1"] = 1
 	m["pi"] = 3.1415
 	m2 := m

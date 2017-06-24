@@ -102,7 +102,7 @@ func main() {
     // type-safety to our programs and eliminating the
     // need for type assertions when accessing the decoded
     // data.
-    str := `{"page": 1, "fruits": ["apple", "peach"]}`
+    str := `{"page": 1, "fruits": ["apple", "peach"], "adf":"adf1"}`
     res := Response2{}
     json.Unmarshal([]byte(str), &res)
     fmt.Println(res)

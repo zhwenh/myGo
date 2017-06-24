@@ -44,11 +44,27 @@ func putZeroToEnd(arr []int) []int {
  return arr
 }
 
+func moveZero(arr []int) []int {
+    n := len(arr)
+    var m int
+    for i := 0; i < n; i++ {
+        if (arr[i] != 0) {
+           arr[m] = arr[i]
+           m++
+        }
+    }
+    
+    for ;m < n; m++ {
+        arr[m] = 0
+    }
+    
+    return arr
+}
 // 20:46 discuss
 //
 
 func main() {
-	fmt.Println(putZeroToEnd([]int{2, 5, 0, 10, 0, 15, 20}))
-	fmt.Println(putZeroToEnd([]int{0, 2, 5, 10, 15, 20, 0}))
+	fmt.Println(moveZero([]int{2, 5, 0, 10, 0, 15, 20}))
+	fmt.Println(moveZero([]int{0, 2, 5, 0, 10, 15, 20, 0}))
 
 }
